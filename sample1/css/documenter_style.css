@@ -1,0 +1,403 @@
+/*@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd/*,ol,ul,li*/,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{
+/*	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;*/
+}
+body {
+	 
+}
+footer, header, section {
+	display:block;
+}
+a{ color:#ed1c24; text-decoration:none; cursor:pointer; }
+a:hover { text-decoration:none;color:#d31118; }
+p, ul, ol{
+	/*margin:18px 0;*/
+	/*line-height:1.5em;*/
+}
+/*li{
+	list-style:none;
+}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+li.placeholder{
+	height:70px;
+	width:100%;
+	font-size:16px;
+}
+hr { 
+	display:block;
+	height:0px;
+	line-height:0px;
+	border:0;
+	border-top:1px solid #efefef;
+	margin:16px 0;
+	padding:0;
+}
+hr.notop{
+	margin-top:0;
+}
+.color {color:#dd1338}
+strong{
+	font-weight:700;
+}
+#documenter_content{
+	position:absolute;
+	right:18px;
+	left:218px;
+	padding-left:10px;
+	padding-bottom:800px;
+	min-height:100%;
+	height:auto;
+	z-index:1;
+}
+
+#documenter_sidebar{
+	-moz-box-shadow:0 0 6px rgba(3,3,3,0.6);
+	-webkit-box-shadow:0 0 6px rgba(3,3,3,0.6);
+	box-shadow:0 0 6px rgba(3,3,3,0.6);
+	position:fixed;
+	left:0;
+	width:210px;
+	height:100%;
+	min-height:100%;
+	z-index:100;color:#fff;
+	background: #BE1E2D;text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+#documenter_sidebar a{
+	position:relative;
+	z-index:100;
+}
+#documenter_nav { font-size: 14px;}
+img{
+	border:0;
+}
+#documenter_copyright{
+	position:absolute;
+	bottom:10px;
+	font-size:11px;
+	width:200px;
+	padding-left:10px;
+	z-index:1;
+}
+
+/*----------------------------------------------------------------------*/
+/* Sidebar
+/*----------------------------------------------------------------------*/
+#documenter_sidebar, #documenter_sidebar ol a{background-color:#248892;color:#fff;}
+#documenter_sidebar ol a:hover{background:rgba(0,0,0,0.2);color:#fff;}
+#documenter_sidebar ol a.current{background:rgba(0,0,0,0.2);color:#fff;}
+ol#documenter_nav {margin:0; padding: 0}
+#documenter_nav li { list-style-type: none;}
+#documenter_nav li a { list-style-type: none; text-decoration: none}
+#documenter_copyright{display:block !important;visibility:visible !important;}
+
+#documenter_sidebar #documenter_logo	{
+/*	display:block;
+	height:30%;
+	max-height:120px;
+	min-height:70px;
+	width:200px;
+	background-image: url(../img/mst.png);
+	background-position:center center;
+	background-repeat:no-repeat;*/
+}
+#documenter_sidebar #documenter_logo img {
+	width: 100%;
+	display: block;
+}
+#documenter_sidebar ol{
+	min-height:150px;
+	height:75%;
+	overflow:auto;
+}
+
+#documenter_sidebar ol li{padding:0;}
+#documenter_sidebar ol a {
+	display:block;
+	padding:6px 15px 7px 10px;
+	border-bottom: 1px solid #1a636a;
+    border-top: 1px solid #32bcc8;
+}
+#documenter_sidebar ol > li:last-child a {
+	border-bottom: none;
+}
+#documenter_sidebar ol > li:first-child a {
+	border-top: none;
+}
+#documenter_sidebar ol a:hover,#documenter_sidebar ol a.current{
+	-webkit-text-shadow:none;
+	-moz-text-shadow:none;
+	text-shadow:none;
+	text-decoration:none;
+}
+#documenter_sidebar ol li ol{
+	border-top:0;
+	font-size:10px;
+	min-height:10px;
+	height:auto;
+	overflow:auto;
+	margin:0;
+	display:none;
+}
+#documenter_sidebar ol li ol li a{
+	display:block;
+	padding:4px 15px 5px 0;
+	text-align:right;
+}
+
+/*----------------------------------------------------------------------*/
+/* Content
+/*----------------------------------------------------------------------*/
+
+#documenter_cover{
+	/*height:800px;
+	padding-top:120px !important;*/
+}
+#documenter_cover li{
+	list-style:none !important;
+	margin-left:0 !important;
+}
+#documenter_content section , .documenter_content section{
+	padding-top:120px;min-height:800px !important;
+}
+
+.info {
+	margin-top:1em; display: block; padding: 6px 7px; background-color: #e7e7e7; color: #222; /*text-shadow: 0 -1px rgba(0,0,0,0.3); */ border: 1px solid rgba(0,0,0,0.1); margin-bottom: 12px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; /*text-shadow: 0 1px rgba(255,255,255,0.9);*/ position: relative;
+}
+.info-success {
+	margin-top:1em; display: block; padding: 6px 7px; background-color: #8cc63e; color: #fff; /*text-shadow: 0 -1px rgba(0,0,0,0.3);*/  border: 1px solid rgba(0,0,0,0.1); margin-bottom: 12px; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; /*text-shadow: 0 1px rgba(255,255,255,0.9); */position: relative;
+}
+table {
+  /*background: white;*/
+  /*margin-bottom: 1.33333rem;*/
+  /*border: solid 1px #248892;*/
+}
+/* line 51, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table thead,
+table tfoot {
+  /*background: whitesmoke;*/
+  /*background: #248892;*/
+  /*background: rgba(36,136,146,1);*/
+  /*color: #fff;*/
+}
+/* line 56, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table thead tr th,
+table thead tr td,
+table tfoot tr th,
+table tfoot tr td {
+  /*padding: 0.53333rem 0.66667rem 0.66667rem;*/
+  /*font-size: 0.93333rem;*/
+  /*font-weight: bold;*/
+  /*color: #222222;*/
+  text-align: left;
+}
+/* line 68, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table tr th,
+table tr td {
+  /*padding: 0.6rem 0.66667rem;*/
+  /*font-size: 0.93333rem;*/
+  /*color: #222222;*/
+}
+/* line 76, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+  /*background: #f9f9f9;*/
+}
+/* line 83, ../bower_components/foundation/scss/foundation/components/_tables.scss */
+table thead tr th,
+table tfoot tr th,
+table tbody tr td,
+table tr td,
+table tfoot tr td {
+  display: table-cell;
+  /*line-height: 1.2rem;*/
+}
+
+
+/* desert scheme ported from vim to google prettify */
+/*pre.prettyprint { display: block; background-color: #333 }*/
+/*pre .nocode { background-color: none; color: #000 }*/
+/*pre .str { color: #ffa0a0 }*/ /* string  - pink */
+/*pre .kwd { color: #f0e68c; font-weight: bold }*/
+/*pre .com { color: #87ceeb } *//* comment - skyblue */
+/*pre .typ { color: #98fb98 }*/ /* type    - lightgreen */
+/*pre .lit { color: #cd5c5c }*/ /* literal - darkred */
+/*pre .pun { color: #fff } */   /* punctuation */
+/*pre .pln { color: #fff }  */  /* plaintext */
+/*pre .tag { color: #f0e68c; font-weight: bold } *//* html/xml tag    - lightyellow */
+/*pre .atn { color: #bdb76b; font-weight: bold } *//* attribute name  - khaki */
+/*pre .atv { color: #ffa0a0 }*/ /* attribute value - pink */
+/*pre .dec { color: #98fb98 }*/ /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+ li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: inherit !important; } 
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+.prettyprint * {
+    color: #000000;
+    font-family: "Courier New",monospace;
+    font-size: 0.9em !important;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    line-height: 10pt;
+}
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+
+.com { color: #93a1a1 !important; }
+.lit { color: #195f91 !important; }
+.pun, .opn, .clo { color: #93a1a1 !important; }
+.fun { color: #dc322f !important; }
+.str, .atv { color: #D14 !important; }
+.kwd, .tag { color: #1e347b !important;}
+.typ, .atn, .dec, .var { color: teal !important; }
+.pln { color: #48484c !important; }
+
+.prettyprint {
+    padding: 8px;
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 11pt !important;
+    line-height: 12pt;
+}
+.prettyprint.linenums {
+    box-shadow: inset 40px 0 0 #eeeeee, inset 41px 0 0 #ececf0;
+}
+
+.prettyprint ol.linenums {
+    margin: 0;
+    padding-left: 35px;
+}
+.prettyprint ol.linenums li {
+    padding-left: 12px !important;
+    color: #999999;
+    line-height: 10pt;
+    text-shadow: 0 1px 0 #fff;
+    margin-bottom: 5px;
+}
+h2 small {
+	display: inline-block;
+	font-size: 55%;
+	font-weight: normal;
+}
+
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+	background: transparent;
+}
+.bootstrap a.toggleShowHide {
+	background-color: #fff;
+    border-color: #ccc;
+    color: #555; 
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 4px 8px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.bootstrap a.toggleShowHide:hover:after {
+ content: "Show Code" ;
+ position: absolute;
+ top: 0;
+ right: 10px;
+ display: inline-block;
+  
+ 
+}
+.bootstrap a.toggleShowHide:hover {
+	text-decoration: none;
+}
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin:0 auto;
+}
+
+.modal-content {
+  overflow-x: hidden;
+  border-radius: 0;
+}
+
+pre {
+    overflow-x: auto;
+    width: 93%;
+}
+pre code {
+    overflow-wrap: normal;
+    word-wrap:normal;
+    white-space: pre;
+}

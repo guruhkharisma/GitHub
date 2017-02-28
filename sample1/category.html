@@ -1,0 +1,701 @@
+<!doctype html>
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <meta content="NOFOLLOW, NOINDEX" name="robots">
+    <title>IDR Web Application - New Request</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <meta name="description" content="">
+    <meta name="author" content="Guroh Kharisma Ramadhan">
+    <meta name="copyright" content="Mitra Solusi Telematika">
+    <meta name="generator" content="">
+    <!-- kendo stylesheet -->
+    <link href="content/css/web/kendo.common.min.css" rel="stylesheet" />
+    <link href="content/css/web/kendo.rtl.min.css" rel="stylesheet" />
+    <link href="content/css/web/kendo.default.min.css" rel="stylesheet" />
+    <link href="content/css/web/kendo.default.mobile.min.css" rel="stylesheet" />
+    <link href="content/css/dataviz/kendo.dataviz.min.css" rel="stylesheet" />
+    <link href="content/css/dataviz/kendo.dataviz.default.min.css" rel="stylesheet" />
+    <!-- kendo stylesheet -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- theme mst -->
+    <link href="css/admin-theme.css" type="text/css" rel="stylesheet">
+    <!--<script src="google-code-prettify/run_prettify.js"></script>-->
+    <!--<link href="css/documenter_style.css" rel="stylesheet" media="all">-->
+    <link href="css/override.css" rel="stylesheet" type="text/css" />
+    <!-- theme mst -->
+    <!-- choosen -->
+    <!-- <link href="css/chosen.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- choosen -->
+    <!-- menu -->
+    <link href="css/sm-core-css.css" rel="stylesheet" type="text/css" />
+    <link href="css/sm-simple/sm-simple.css" rel="stylesheet" type="text/css" />
+    <!-- menu -->
+    <link href="css/themes/default/css/uniform.default.min.css" type="text/css" rel="stylesheet">
+    <!-- fullcalendar -->
+    <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" />
+    <link href="css/fullcalendar/fullcalendar.print.css" rel="stylesheet" type="text/css" media='print' />
+    <!-- fullcalendar -->
+    <!-- daterange picker -->
+    <link href="css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <link href="css/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" />
+    <link href="css/timepicker/bootstrap-timepicker.min.css" rel="stylesheet" />
+    <!-- daterange picker -->
+    <!-- fontawesome -->
+    <link href="font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <!-- fontawesome -->
+    <!-- fanmenu -->
+    <!-- <link href="css/fanmenu/jquery.fanmenu.css" rel="stylesheet" type="text/css"> -->
+    <!-- fanmenu -->
+    <link href="favicon.ico" type="image/png" rel="icon">
+    <script src="js/modernizr.min.js" type="text/javascript"></script>
+    <script src="js/enquire.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <!-- plugin kendo -->
+    <script src="content/js/kendo.all.min.js"></script>
+    <script src="content/js/kendo.datetimepicker.min.js"></script>
+</head>
+
+<body class="page-sidebar admindashboard bootstrap" style="overflow: hidden;">
+    <!-- <div id='quick-link' class="fm_wrap" >
+        <a class="fm_btntoggle" href="#" title="Toggle"><i class="fa fa-plus"></i></a>
+        <ul class="fm_list" id="fm_list">
+            <li data-panel="panel-1"><a href="#" data-toggle="tooltip" data-original-title="fullscreen" class="label-tooltip"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#" data-toggle="tooltip" data-original-title="fullscreen" class="label-tooltip"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="#" data-toggle="tooltip" data-original-title="fullscreen" class="label-tooltip"><span class="fa fa-rss"></span></a></li>
+            <li><a href="#" data-toggle="tooltip" data-original-title="fullscreen" class="label-tooltip"><span class="fa fa-question"></span>F.A.Q</a></li>
+            <li><a href="#" data-toggle="tooltip" data-original-title="fullscreen" class="label-tooltip"><span class="fa fa-globe"></span>Peta Situs</a></li>
+             
+        </ul>
+        <div class="overlay" id="overlay"></div>
+    </div> -->
+    <!-- loading preloader -->
+    <div id="loading">
+        <div id="loading-container" class="fullwidth">
+            <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p id='loading-text'>Loading...</p>
+        </div>
+    </div>
+    <!-- loading preloader -->
+    <!-- begin header -->
+    <header class="bootstrap" id="header">
+        <nav id="header_infos" role="navigation">
+            <div class="navbar-header">
+
+                <div id="header_toggle_menu" class="visible-lg-block visible-md-block">
+                    <a href="#" class="menu-collapse-desktop toggle-menu" title="Open/Close Menu">
+                        <i class="icons fa fa-bars"></i>
+                    </a>
+                </div>
+
+                <a id="header_shopname" href="#">
+                    <img src="img/logo.gif"><strong>IDR Web Application</strong>
+                    <!-- - Customer Relationship Management -->
+                </a>
+
+                <!-- float right -->
+                <ul id="header_employee_box" class="pos_left">
+                    <li class="dropdown" id="employee_infos">
+                        <a data-toggle="dropdown" class="employee_name dropdown-toggle" href="#">
+                            <span class="employee_avatar_small">
+								<img width="32" height="32" src="img/avatar.png" alt="" class="imgm img-thumbnail">
+							</span>
+                            <span class="string-long">Hello <strong>Guruh Kharisma</strong></span>
+                            <span class="string-short">Guruh Kharisma</span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu pos_left" id="employee_links">
+                            <li>
+                                <span class="employee_avatar">
+									<img width="96" height="96" src="img/avatar.png" alt="" class="imgm img-thumbnail">
+								</span>
+                            </li>
+                            <li class="text-center">Guruh Kharisma</li>
+                            <li class="divider"></li>
+                            <li><a href=""><i class="fa fa-wrench"></i> My preferences</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="login.html" id="header_logout"><i class="fa fa-sign-out"></i> Sign out</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- float left -->
+                <ul id="header_notifs_icon_wrapper" class="pull-right">
+                    <li class="dropdown" id="employee_message_notifications">
+                        <a class="border-circle" data-toggle="dropdown">
+                            <i class="fa fa-warning"></i>
+                            <span class="notifs_badge pulsate">
+								<span id="">3</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu pos_left notifs_dropdown">
+                            <section class="notifs_panel">
+                                <div class="notifs_panel_header">
+                                    <h3>You have <strong>3</strong> Notifications</h3>
+                                </div>
+                                <div class="list_notif" id="list_customers_notif">
+                                    <ul class="menu" style="overflow: hidden; width: 100%;">
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-group fa-2 bg-lime"></i> 5 new approval request
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-close fa-2 bg-orange"></i> Activity plan rejected
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-user-plus fa-2 bg-olive"></i> 1 Customer ID created
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-check-circle fa-2 bg-blue"></i> 5 quotations approved
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- <a href="#">
+										<p>Employee name: &nbsp;<strong>Guruh Kharisma Ramadhan</strong></p>
+										<small class="text-muted">
+											<i class="icon-time"></i> 8 days ago
+										</small>
+									</a> -->
+                                </div>
+                                <!-- <div class="notifs_panel_footer">
+									<a href="#">Show all</a>
+								</div> -->
+                            </section>
+                        </div>
+                    </li>
+                    <li class="dropdown" id="employee_task_notifications">
+                        <a class="border-circle" data-toggle="dropdown">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="notifs_badge">
+								<span id="">10</span>
+                            </span>
+                        </a>
+                        <div class="dropdown-menu pos_left notifs_dropdown">
+                            <section class="notifs_panel">
+                                <div class="notifs_panel_header">
+                                    <h3>Latest Messages</h3>
+                                </div>
+                                <div class="list_notif" id="list_customers_notif">
+                                    <ul class="menu" style="overflow: hidden; width: 100%;">
+                                        <li>
+                                            <a href="#">
+                                                <p>Employee name: &nbsp;<strong>Guruh Kharisma Ramadhan</strong>
+                                                </p>
+                                                <small class="text-muted">
+												<i class="icon-time"></i> 8 days ago
+											</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <p>Employee name: &nbsp;<strong>Guruh Kharisma Ramadhan</strong>
+                                                </p>
+                                                <small class="text-muted">
+													<i class="icon-time"></i> 8 days ago
+												</small>
+                                            </a>
+                                        </li>
+                                        <!-- <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-close fa-2 bg-orange"></i> Activity plan rejected
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-user-plus fa-2 bg-olive"></i> 1 Customer ID created
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="jumbofont">
+                                                <i class="fa fa-check-circle fa-2 bg-blue"></i> 5 quotations approved
+                                            </a>
+                                        </li> -->
+
+                                    </ul>
+                                </div>
+                                <!-- <div class="notifs_panel_footer">
+									<a href="#">Show all</a>
+								</div> -->
+                            </section>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- begin main -->
+    <div id="main">
+        <!-- begin pusher -->
+        <div class="pusher bootstrap">
+            <!-- begin nav-sidebar -->
+            <nav id="nav-sidebar" role="navigation">
+                <ul id="main-menu" class="sm sm-simple sm-vertical sm-simple-vertical menu">
+                    <li class="searchtab">
+                        <form role="search" action="" method="post" class="bo_search_form" id="header_search">
+                            <div class="form-group">
+                                <input type="hidden" id="bo_search_type" name="bo_search_type">
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+                                            <i class="fa fa-search" id="search_type_icon"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu" id="header_search_options">
+                                            <li class="search-all search-option active">
+                                                <a data-icon="fa fa-search" data-placeholder="What are you looking for?" data-value="0" href="#">
+                                                    <i class="fa fa-search"></i> Everywhere</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li class="search-book search-option">
+                                                <a data-icon="fa fa-book" data-placeholder="Employee Data..." data-value="1" href="#">
+                                                    <i class="fa fa-book"></i> Employee Data
+                                                </a>
+                                            </li>
+                                            <li class="search-customers-name search-option">
+                                                <a data-icon="fa fa-group" data-placeholder="Customers by name..." data-value="2" href="#">
+                                                    <i class="fa fa-group"></i> Customers by name
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a class="clear_search hide" href="#">
+                                        <i class="fa fa-remove"></i>
+                                    </a>
+                                    <input type="text" placeholder="Search" value="" class="form-control q" name="bo_query" id="bo_query">
+                                    <!--  							<span class="input-group-btn">
+									<button type="submit" id="bo_search_submit" class="btn btn-primary">
+									<i class="fa fa-search"></i>
+									</button>
+									</span> -->
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+
+                    <li class="maintab">
+                        <a class="title" href="dashboard.html">
+                            <i class="fa fa-home"></i>
+                            <span class="text">Home &amp; Requirements</span>
+                        </a>
+                    </li>
+                    <li class="maintab  has_submenu">
+                        <a class="title" href="#">
+                            <i class="fa fa-edit"></i>
+                            <span class="text">Form</span>
+                            <span class="icon-chevron-right pull-right pos-absolute pos-top-10 pos-right-10"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="form-basic.html">Basic Form</a>
+                            </li>
+                            <li class="active">
+                                <a href="form-horizontal.html">Horizontal Form</a>
+                            </li>
+                            <li>
+                                <a href="form-advanced-kendo.html">Advanced Form with Kendo</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="maintab  has_submenu active">
+                        <a class="title" href="">
+                            <i class="fa fa-laptop"></i>
+                            <span class="text">UI Elements</span>
+                            <span class="icon-chevron-right pull-right pos-absolute pos-top-10 pos-right-10"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="ui-general.html">General</a>
+                            </li>
+                            <li class="active">
+                                <a href="ui-icons.html">Icons</a>
+                            </li>
+                            <li>
+                                <a href="ui-buttons.html">Buttons</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="maintab  has_submenu">
+                        <a class="title" href="">
+                            <i class="fa fa-table"></i>
+                            <span class="text">Table</span>
+                            <span class="icon-chevron-right pull-right pos-absolute pos-top-10 pos-right-10"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="table-basic.html">Basic Table</a>
+                            </li>
+                            <li>
+                                <a href="table-advanced-kendo.html">Advanced Table with Kendo</a>
+                            </li>
+                            <li>
+                                <a href="table-advanced-datatable.html">Advanced Table with Datatable</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="maintab">
+                        <a class="title" href="widgets.html">
+                            <i class="fa fa-th"></i>
+                            <span class="text">Widgets</span>
+                        </a>
+                    </li>
+                    <li class="maintab  has_submenu">
+                        <a class="title" href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span class="text">Charts</span>
+                            <span class="icon-chevron-right pull-right pos-absolute pos-top-10 pos-right-10"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="chart-highchart.html">HighChart</a>
+                            </li>
+                            <li>
+                                <a href="chart-kendo.html">Chart with Kendo</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="maintab  has_submenu">
+                        <a class="title" href="#">
+                            <i class="fa fa-folder"></i>
+                            <span class="text">Examples</span>
+                            <span class="icon-chevron-right pull-right pos-absolute pos-top-10 pos-right-10"></span>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="login.html" target="_blank">Login</a>
+                            </li>
+                            <!-- <li>
+								<a href="chart-kendo.html">Chart with Kendo</a>
+							</li>	 -->
+                        </ul>
+                    </li>
+                    <li class="download">
+                        <div class="text-center">
+                            <!-- <input type="button" value="Download" onClick="download('example.zip')" class="btn btn-danger" > -->
+                            <button onClick="download('example.zip')" class="btn btn-danger">
+                                <i class="fa fa-download"></i> <span class="text">Download</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <span class="menu-collapse"><i class="icon-align-justify"></i></span>
+                <!-- <div>
+					<a class="btn btn-danger" href="#"><i class="fa fa-download"></i> Download</a>
+				</div> -->
+            </nav>
+            <!-- end nav-sidebar -->
+        </div>
+        <!-- end pusher -->
+        <!-- begin content -->
+        <div id="content" class="bootstrap">
+
+            <div class="bootstrap">
+                <div class="page-head">
+                    <h2 class="page-title">IDR Web Application</h2>
+                    <ul class="breadcrumb page-breadcrumb">
+
+                        <li class="breadcrumb-container">
+                            <a href="#"><i class="fa fa-angle-left"></i>Home</a>
+                        </li>
+                        <li class="breadcrumb-container">
+                            <a href="#"><i class="fa fa-angle-left"></i>New Request</a>
+                        </li>
+                        <li class="breadcrumb-container current">
+                            <a href="#">Service Catalog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- begin bootstrap -->
+            <div class="bootstrap">
+                <div class="panel-group">
+                    <div class="" role="tablist" aria-multiselectable="true">
+                        <div class="panel-body">
+                            <div class="col-md-12">
+                                <!-- Projects Row -->
+                                <div class="row">
+                                    <div class="col-md-3 col-xs-6 portfolio-item">
+                                        <div class="bl-box">
+                                            <a href="#">
+                                                <img class="img-responsive" src="img/laptop4.png" alt="">
+                                                <!-- <div>
+						                    	<i class="fa fa-link"></i>
+						                    </div>
+						                    <span class="overlay-icon"></span> -->
+                                            </a>
+                                            <h3>
+							                    <a class="btn btn-block title" href="#">Laptop Executive</a>
+							                </h3>
+
+                                            <p>
+                                                <span>RAM : 2 GB</span>
+                                                <span>HDD : 250 GB</span>
+                                                <span class="collapses hide">VGA : On Board</span>
+                                                <span class="collapses hide">Processor : Intel Core i9</span>
+                                                <span class="collapses hide">Bluetooth</span>
+                                                <a href="#" class="btn btn-link btn-block more-data text-right"><i class="fa fa-plus"></i> more data</a>
+                                            </p>
+                                            <a href="#" class="more-links" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-right-top">
+                                                <ul class="list-unstyled">
+                                                    <li>
+	                                                    <a href="#">Open Link</a>
+                                                    </li>
+                                                    <!-- <li><a href="#">Add to wishlist</a></li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-3 col-xs-6 portfolio-item">
+                                        <div class="bl-box">
+                                            <a href="#">
+                                                <img class="img-responsive" src="img/laptop4.png" alt="">
+                                                <!-- <div>
+						                    	<i class="fa fa-link"></i>
+						                    </div>
+						                    <span class="overlay-icon"></span> -->
+                                            </a>
+                                            <h3>
+						                    <a class="btn btn-block" href="new-request.html">Laptop General</a>
+						                </h3>
+
+                                            <p><span>RAM : 2 GB</span><span>HDD : 250 GB</span><span>VGA : On Board</span><span>Processor : Intel Core i9</span><span>Bluetooth</span><span>Wifi</span><span>Dolby Digital</span>
+                                            </p>
+
+                                            <a href="" class="more-links" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></a>
+                                            <div class="dropdown-menu dropdown-right-top">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">Open Link</a>
+                                                    </li>
+                                                    <!-- <li><a href="#">Add to wishlist</a></li> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end content -->
+    </div>
+    <!-- end main -->
+
+
+    <!-- javascript -->
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/jquery.uniform.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <script src="js/jquery.autosize.js" type="text/javascript"></script>
+    <!--<script src="js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>-->
+    <script src="js/jquery.scrollTo.js" type="text/javascript"></script>
+    <script src="js/jquery.hotkeys.js"></script>
+    <script src="js/jquery.smartmenus.js" type="text/javascript"></script>
+    <!-- fullCalendar -->
+    <script src="js/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="js/fanmenu/jquery.fanmenu.js"></script>-->
+    <script src="js/chosen.jquery.min.js" type="text/javascript"></script>
+    <script src="js/admin-theme.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+
+        setTimeout(function() {
+            $("#loading").fadeOut(function() {
+
+                $(this).remove();
+                $('body').removeAttr('style');
+
+                // $('.portfolio-item').each(function (index) {
+
+                //          var $this = $(this);
+                //          setTimeout(function (index) {
+                //              $this.addClass('new-item');
+                //          }, 400 * index * 2 );
+
+
+                //          //            $this.delay(250 * index * 2).queue(function () {
+                //          //                $this.show().addClass('animated fadeInUp');
+                //          //            });
+                //       });
+
+                // $(".portfolio-item").each(function (index) {
+                // 	var this = $('this');
+                // 	this.addClass('new-item');
+                // });
+
+            })
+        }, 1);
+    });
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        $('#main-menu').smartmenus({
+            mainMenuSubOffsetX: 0,
+            mainMenuSubOffsetY: -9,
+            // subMenusSubOffsetX: -1,
+            subMenusSubOffsetY: -9,
+            subIndicatorsText: '',
+            subMenusMinWidth: '16em'
+        });
+
+
+        var config = {
+            '.chosen-select': {
+                width: "100%"
+            },
+            // '.chosen-select-deselect'  : {allow_single_deselect:true},
+            // '.chosen-select-no-single' : {disable_search_threshold:10},
+            // '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+            // '.chosen-select-width'     : {width:"95%"}
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+        /* initialize the calendar
+                     -----------------------------------------------------------------*/
+        //Date for the calendar events (dummy data)
+        var date = new Date();
+        var d = date.getDate(),
+            m = date.getMonth(),
+            y = date.getFullYear();
+        var approval = 'Approval';
+        $('#calendar').fullCalendar({
+            defaultView: 'agendaWeek',
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'agendaWeek'
+
+            },
+            buttonText: { //This is to add icons to the visible buttons
+                prev: "<span class='fa fa-caret-left'></span>",
+                next: "<span class='fa fa-caret-right'></span>",
+                today: 'today',
+                week: 'approval'
+            },
+            //Random default events
+            events: [{
+                title: 'Email Blast',
+                start: new Date(y, m, 1),
+                backgroundColor: "#f56954", //red
+                borderColor: "#f56954" //red
+            }, {
+                title: 'Email Blast',
+                start: new Date(y, m, d - 5),
+                end: new Date(y, m, d - 2),
+                backgroundColor: "#f39c12", //yellow
+                borderColor: "#f39c12" //yellow
+            }, {
+                title: 'Meeting',
+                start: new Date(y, m, d, 10, 30),
+                allDay: false,
+                backgroundColor: "#0073b7", //Blue
+                borderColor: "#0073b7" //Blue
+            }, {
+                title: 'Call',
+                start: new Date(y, m, d, 12, 0),
+                end: new Date(y, m, d, 14, 0),
+                allDay: false,
+                backgroundColor: "#00c0ef", //Info (aqua)
+                borderColor: "#00c0ef" //Info (aqua)
+            }, {
+                title: 'Meeting',
+                start: new Date(y, m, d + 1, 19, 0),
+                end: new Date(y, m, d + 1, 22, 30),
+                allDay: false,
+                backgroundColor: "#00a65a", //Success (green)
+                borderColor: "#00a65a" //Success (green)
+            }, {
+                title: 'Meeting',
+                start: new Date(y, m, 28),
+                end: new Date(y, m, 29),
+                url: 'http://google.com/',
+                backgroundColor: "#3c8dbc", //Primary (light-blue)
+                borderColor: "#3c8dbc" //Primary (light-blue)
+            }],
+            editable: true,
+            droppable: true, // this allows things to be dropped onto the calendar !!!
+            drop: function(date, allDay) { // this function is called when something is dropped
+
+                // retrieve the dropped element's stored Event Object
+                var originalEventObject = $(this).data('eventObject');
+
+                // we need to copy it, so that multiple events don't have a reference to the same object
+                var copiedEventObject = $.extend({}, originalEventObject);
+
+                // assign it the date that was reported
+                copiedEventObject.start = date;
+                copiedEventObject.allDay = allDay;
+                copiedEventObject.backgroundColor = $(this).css("background-color");
+                copiedEventObject.borderColor = $(this).css("border-color");
+
+                // render the event on the calendar
+                // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+                $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+
+                // is the "remove after drop" checkbox checked?
+                if ($('#drop-remove').is(':checked')) {
+                    // if so, remove the element from the "Draggable Events" list
+                    $(this).remove();
+                }
+
+            }
+        });
+
+        //Date range picker with time picker
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            format: 'MM/DD/YYYY h:mm A'
+        });
+    })
+    </script>
+
+
+    <!--<script src="js/modernizr-loads.js" type="text/javascript"></script>-->
+
+    <!--<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>-->
+
+</body>
+
+</html>
